@@ -89,36 +89,6 @@ shinyApp(
       },
       ignoreNULL = FALSE
     )
-        
-        
-        
-    #   data = eventReactive(
-    #     input$refresh,
-    #     {replicate(
-    #     iter,
-    #     runif(input$oldN,xmin,xmax)
-    #   ) %>%
-    #       as_tibble %>%
-    #       rename_all(
-    #         funs(
-    #           gsub('V','x',.)
-    #         )
-    #       ) %>%
-    #       bind_cols(
-    #         transmute_all(
-    #           .,
-    #           funs(
-    #             trueDist(.) %>% add(rnorm(input$oldN))
-    #           )
-    #         ) %>%
-    #           rename_all(
-    #             funs(
-    #               gsub('x','y',.)
-    #             )
-    #           )
-    #       )
-    #   },ignoreNULL = FALSE
-    # )
     
     models = reactive(
       lapply(
